@@ -20,10 +20,10 @@ class EntryViewController: UIViewController {
     
     @IBAction func loginBtnTapped(_ sender: ButtonRounded) {
         
-        let nv = self.storyboard?.instantiateViewController(withIdentifier: "CreditCardViewController") as! CreditCardViewController
-        self.navigationController?.pushViewController(nv, animated: false)
-//        let nv = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-//        self.navigationController?.pushViewController(nv, animated: true)
+//        let nv = self.storyboard?.instantiateViewController(withIdentifier: "CreditCardViewController") as! CreditCardViewController
+//        self.navigationController?.pushViewController(nv, animated: false)
+        let nv = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        self.navigationController?.pushViewController(nv, animated: true)
         
     }
     
