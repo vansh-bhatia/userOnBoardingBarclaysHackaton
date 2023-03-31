@@ -14,6 +14,10 @@ class CreditCardViewController: UIViewController {
     
     @IBOutlet weak var tickAnimationView: LottieAnimationView!
     
+    @IBAction func backBtn(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

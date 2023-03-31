@@ -2065,6 +2065,9 @@ Cg
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="back-arrow" title=" "/>
+                                <connections>
+                                    <action selector="backBtn:" destination="St9-Pw-oyl" eventType="touchUpInside" id="tA1-le-JGG"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHX-f4-eIi" userLabel="View">
                                 <rect key="frame" x="0.0" y="138" width="393" height="64"/>
