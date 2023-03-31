@@ -234,6 +234,9 @@ extension DOBGenderAadharViewController {
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
+            let nv = self.storyboard?.instantiateViewController(withIdentifier: "CreditCardViewController") as! CreditCardViewController
+            self.navigationController?.pushViewController(nv, animated: false)
+            
          })
         
         //Add OK button to a dialog message
@@ -248,8 +251,8 @@ extension DOBGenderAadharViewController {
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
-            let nv = self.storyboard?.instantiateViewController(withIdentifier: "CreditCardViewController") as! CreditCardViewController
-            self.navigationController?.pushViewController(nv, animated: false)
+//            let nv = self.storyboard?.instantiateViewController(withIdentifier: "CreditCardViewController") as! CreditCardViewController
+//            self.navigationController?.pushViewController(nv, animated: false)
             
          })
         
