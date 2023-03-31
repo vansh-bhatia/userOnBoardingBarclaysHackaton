@@ -2124,6 +2124,7 @@ verified.</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameAndCardLbl" destination="5IW-aX-JnR" id="ORF-ak-lHf"/>
                         <outlet property="tickAnimationView" destination="RDO-sa-XaA" id="p1S-N5-neo"/>
                     </connections>
                 </viewController>

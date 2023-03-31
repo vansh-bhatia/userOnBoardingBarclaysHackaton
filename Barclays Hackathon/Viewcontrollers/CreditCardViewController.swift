@@ -11,6 +11,7 @@ import Lottie
 class CreditCardViewController: UIViewController {
 
    // @IBOutlet weak var creditcardView: CreditCardView!
+    @IBOutlet weak var nameAndCardLbl: UILabel!
     
     @IBOutlet weak var tickAnimationView: LottieAnimationView!
     
@@ -35,7 +36,25 @@ class CreditCardViewController: UIViewController {
         
         tickAnimationView.play()
         
+        let name = (LoginVM.data?["name"] as? String) ?? "Vansh Bhatia"
+        let string1 = NSAttributedString(string: "\(name)\n", attributes: [.font: UIFont(name: "Futura Medium Italic", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.white])
+        //let string2 = NSAttributedString(string: "\n", attributes: [.font: UIFont(name: "Tamil Sangam MN", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.white])
+        let string3 = NSAttributedString(string: "\n 4556  5642  0695  5168", attributes: [.font: UIFont(name: "Tamil Sangam MN", size: 16)!])
+        nameAndCardLbl.attributedText = string1 + string3
+        
+        
     }
     
+    
+    
 
+}
+extension NSAttributedString {
+    static func + (left: NSAttributedString, right: NSAttributedString) -> NSAttributedString
+    {
+        let result = NSMutableAttributedString()
+        result.append(left)
+        result.append(right)
+        return result
+    }
 }

@@ -4,6 +4,10 @@ import Foundation
 class LoginVM: NSObject {
     
     weak var vc : LoginViewController?
+    
+    
+    static var data: [String : Any]?
+    
     func callAPI(param : [String:Any?])
     {
         let url = URL(string: "https://busy-ruby-kangaroo-wear.cyclic.app/user/login")
@@ -27,7 +31,7 @@ class LoginVM: NSObject {
             if let myData = AllData
             {   let data = convertToDictionary(text: myData)
                 print("Data is \(data)")
-                
+                LoginVM.data = data
                 if data?["error"] == nil{
                     
                     DispatchQueue.main.async {
