@@ -50,21 +50,12 @@ class Validation: NSObject {
         return false
     }
     func isPassNumberValid(value: String) -> Bool {
-
+        
         if value.count >= 6 && value.count <= 18 {
             return true
         }
         return false
-
-    }
-
-    func isNewCarRegistrationValid(value: String) -> Bool {
-
-        if value.count >= 10 && value.count <= 16 {
-            return true
-        }
-        return false
-
+        
     }
 
     func isPasswordValid(password: String?) -> Bool {

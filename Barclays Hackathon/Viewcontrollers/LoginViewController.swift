@@ -38,7 +38,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         invalidRegNoLbl.isHidden = true
         invalidPwdLbl.isHidden = true
-        carRegTextField.addTarget(self, action: #selector(txtPhoneNumberDidChange), for: .editingChanged)
+        // carRegTextField.addTarget(self, action: #selector(txtPhoneNumberDidChange), for: .editingChanged)
         
         vm.vc = self
     }
@@ -96,7 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 extension LoginViewController {
     @IBAction func nextButtonAction(_ sender: Any) {
         let newTextWithoutSpace = carRegTextField.text?.replacingOccurrences(of: " ", with: "")
-        if carRegTextField.text != "" && pwdTextField.text != "" {
+        if Validation.doValid.isEmailValid(value: carRegTextField.text!) && pwdTextField.text != "" {
             print("Enabled")
             showCorrectUI()
             nextButtonOutlet.isUserInteractionEnabled = true
@@ -108,7 +108,7 @@ extension LoginViewController {
                 
                 let param = [
                     "password":self.pwdTextField.text,
-                    "phone":newTextWithoutSpace
+                    "email":newTextWithoutSpace
                 ]
                 
                  self.vm.callAPI(param: param)
@@ -134,7 +134,7 @@ extension LoginViewController {
     
     func showIncorrectUI() {
     
-        if !Validation.doValid.isContactNumberValid(value: carRegTextField.text!) {
+        if !Validation.doValid.isEmailValid(value: carRegTextField.text!) {
             print("Incorrect reg")
             invalidRegNoLbl.isHidden = false
             viewRoundedRegTextField.borderColorV = .red
@@ -204,6 +204,9 @@ extension LoginViewController {
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             print("Ok button tapped")
+            
+            let nv = self.storyboard?.instantiateViewController(withIdentifier: "CreditCardViewController") as! CreditCardViewController
+            self.navigationController?.pushViewController(nv, animated: false)
          })
         
         //Add OK button to a dialog message
