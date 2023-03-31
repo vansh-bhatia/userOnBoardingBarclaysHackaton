@@ -1778,7 +1778,7 @@ Our Privacy Policy outlines how we collect, use, and share information through t
                                                                 </constraints>
                                                                 <color key="textColor" red="0.035294117649999998" green="0.1333333333" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="FuturaPT-Demi" family="Futura PT" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="email"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
