@@ -2125,6 +2125,7 @@ verified.</string>
                     </view>
                     <connections>
                         <outlet property="nameAndCardLbl" destination="5IW-aX-JnR" id="ORF-ak-lHf"/>
+                        <outlet property="successVerifiedLbl" destination="env-pE-L2I" id="ZbD-xg-u9T"/>
                         <outlet property="tickAnimationView" destination="RDO-sa-XaA" id="p1S-N5-neo"/>
                     </connections>
                 </viewController>

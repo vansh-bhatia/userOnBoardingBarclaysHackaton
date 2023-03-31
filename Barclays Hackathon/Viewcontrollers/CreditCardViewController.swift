@@ -15,6 +15,7 @@ class CreditCardViewController: UIViewController {
     
     @IBOutlet weak var tickAnimationView: LottieAnimationView!
     
+    @IBOutlet weak var successVerifiedLbl: UILabel!
     @IBAction func backBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -42,6 +43,11 @@ class CreditCardViewController: UIViewController {
         let string3 = NSAttributedString(string: "\n 4556  5642  0695  5168", attributes: [.font: UIFont(name: "Tamil Sangam MN", size: 16)!])
         nameAndCardLbl.attributedText = string1 + string3
         
+        
+        let string4 = NSAttributedString(string: "Your account has been successfully verified. \n", attributes: [.font: UIFont(name: "Futura Bold", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.black])
+        
+        let string5 = NSAttributedString(string: "Reference ID is 872321233", attributes: [.font: UIFont(name: "Futura Medium Italic", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.black])
+        successVerifiedLbl.attributedText = string4 + string5
         
     }
     
