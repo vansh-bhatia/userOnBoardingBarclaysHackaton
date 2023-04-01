@@ -46,7 +46,7 @@ class CreditCardViewController: UIViewController {
         
         let string4 = NSAttributedString(string: "Your account has been successfully verified. \n", attributes: [.font: UIFont(name: "Futura Bold", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.black])
         
-        let string5 = NSAttributedString(string: "Reference ID is 872321233", attributes: [.font: UIFont(name: "Futura Medium Italic", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.black])
+        let string5 = NSAttributedString(string: "Account number is 872321233", attributes: [.font: UIFont(name: "Futura Medium Italic", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.black])
         successVerifiedLbl.attributedText = string4 + string5
         
     }

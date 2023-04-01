@@ -23,9 +23,20 @@ class RegisVM: NSObject {
                 }
                 return
             }
+            
+            if message == "699" {
+                let errMessage = message
+                DispatchQueue.main.async {
+                    self.vc?.failureWithGovt(message: errMessage)
+                }
+                return
+            }
+            
+            
 
             if let myData = AllData
             {   let data = convertToDictionary(text: myData)
+                LoginVM.data = data?["new_user"] as? [String:Any]
                 print("Data is \(data)")
                 
                 if data?["error"] == nil {

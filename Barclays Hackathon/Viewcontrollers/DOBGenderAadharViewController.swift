@@ -86,7 +86,7 @@ class DOBGenderAadharViewController: UIViewController, UIGestureRecognizerDelega
                     "gender": DOBGenderAadharViewController.gender,
                     "dob": DOBGenderAadharViewController.dob,
                     "aadhar": DOBGenderAadharViewController.aadhar,
-                    "password": NameEmailPwdViewController.name,
+                    "password": NameEmailPwdViewController.pwd,
                     "email": NameEmailPwdViewController.email,
                     "pan": DOBGenderAadharViewController.pan,
                     "phone": OTPEnterViewController.mobNum
@@ -247,6 +247,23 @@ extension DOBGenderAadharViewController {
     }
     func failure(message: String?) {
         var dialogMessage = UIAlertController(title: "Confirm", message: "Something went wrong!", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+//            let nv = self.storyboard?.instantiateViewController(withIdentifier: "CreditCardViewController") as! CreditCardViewController
+//            self.navigationController?.pushViewController(nv, animated: false)
+            
+         })
+        
+        //Add OK button to a dialog message
+        dialogMessage.addAction(ok)
+        // Present Alert to
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func failureWithGovt(message: String?) {
+        var dialogMessage = UIAlertController(title: "Confirm", message: "Something went wrong! Your details are not as per Government Records!", preferredStyle: .alert)
         
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
